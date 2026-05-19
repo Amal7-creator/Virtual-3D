@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Portfolio | Virtual 3D</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
@@ -26,6 +28,7 @@ body{
     radial-gradient(circle at bottom right,#fad0c4 0%,transparent 30%),
     radial-gradient(circle at center,#a18cd1 0%,transparent 35%),
     linear-gradient(135deg,#0f172a,#111827,#1e1b4b);
+
     color:white;
     overflow-x:hidden;
 }
@@ -209,12 +212,36 @@ footer{
     color:#d1d5db;
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
+header{
+    padding:18px 5%;
+}
+
+.hero{
+    padding:140px 5% 70px;
+}
+
 .hero h1{
     font-size:48px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.portfolio{
+    padding:20px 5% 80px;
+}
+
+.grid{
+    gap:25px;
+}
+
+.project-image{
+    height:240px;
 }
 
 nav{
@@ -223,19 +250,71 @@ nav{
 
 }
 
+/* MOBILE */
+
 @media(max-width:600px){
 
+header{
+    padding:16px 5%;
+}
+
+.logo{
+    font-size:24px;
+}
+
+.hero{
+    padding-top:120px;
+}
+
 .hero h1{
-    font-size:38px;
+    font-size:34px;
+    line-height:1.3;
 }
 
 .hero p{
-    font-size:15px;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.grid{
+    grid-template-columns:1fr;
+    gap:22px;
+}
+
+.project-card{
+    border-radius:22px;
+}
+
+.project-image{
+    height:220px;
+}
+
+.project-content{
+    padding:22px;
+}
+
+.project-content h3{
+    font-size:21px;
+}
+
+.project-content p{
+    font-size:14px;
+}
+
+.tags span{
+    font-size:12px;
+    padding:7px 14px;
+}
+
+footer{
+    padding:28px 5%;
+    font-size:14px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -253,7 +332,7 @@ Virtual<span> 3D</span>
 </div>
 
 <nav>
-<a href="web.html">Home</a>
+<a href="index.html">Home</a>
 </nav>
 
 </header>
@@ -281,289 +360,416 @@ building renders crafted with creativity and precision.
 <div class="grid">
 
 <!-- 1 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="1.jpg">
 </div>
+
 <div class="project-content">
 <h3>Modern Minimal Home</h3>
-<p>Premium modern residential architecture with elegant exterior styling.</p>
+
+<p>
+Premium modern residential architecture with elegant exterior styling.
+</p>
+
 <div class="tags">
 <span>Exterior</span>
 <span>Luxury</span>
 <span>3D Render</span>
 </div>
+
 </div>
 </div>
 
 <!-- 2 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="2.jpg">
 </div>
+
 <div class="project-content">
 <h3>Elegant Exterior</h3>
-<p>Luxury Exterior visualization with cinematic lighting and textures.</p>
+
+<p>
+Luxury exterior visualization with cinematic lighting and textures.
+</p>
+
 <div class="tags">
 <span>Architectural</span>
 <span>Modern</span>
 <span>Luxury</span>
 </div>
+
 </div>
 </div>
 
 <!-- 3 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="3.jpg">
 </div>
+
 <div class="project-content">
 <h3>Modern Home</h3>
-<p>Modern Home architecture with realistic  surroundings.</p>
+
+<p>
+Modern home architecture with realistic surroundings.
+</p>
+
 <div class="tags">
 <span>Luxury</span>
 <span>Exterior</span>
 <span>Architecture</span>
 </div>
+
 </div>
 </div>
 
 <!-- 4 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="4.jpg">
 </div>
+
 <div class="project-content">
 <h3>Luxury Home</h3>
-<p>Contemporary Home concept with premium design aesthetics.</p>
+
+<p>
+Contemporary home concept with premium design aesthetics.
+</p>
+
 <div class="tags">
 <span>Home</span>
 <span>Modern</span>
 <span>3D Design</span>
 </div>
+
 </div>
 </div>
 
 <!-- 5 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="5.jpg">
 </div>
+
 <div class="project-content">
 <h3>Modern Premium House</h3>
-<p>Modern  home concept with stylish modern architecture.</p>
+
+<p>
+Modern home concept with stylish modern architecture.
+</p>
+
 <div class="tags">
 <span>Modern</span>
 <span>Exterior</span>
 <span>Concept</span>
 </div>
+
 </div>
 </div>
 
 <!-- 6 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="6.jpg">
 </div>
+
 <div class="project-content">
 <h3>Elegant Exterior Home</h3>
-<p>Elegant architecture with beautiful lighting environment.</p>
+
+<p>
+Elegant architecture with beautiful lighting environment.
+</p>
+
 <div class="tags">
 <span>Home</span>
 <span>Premium</span>
 <span>Luxury</span>
 </div>
+
 </div>
 </div>
 
 <!-- 7 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="7.jpg">
 </div>
+
 <div class="project-content">
 <h3>Modern Home Design</h3>
-<p>Modern Home visualization with realistic textures.</p>
+
+<p>
+Modern home visualization with realistic textures.
+</p>
+
 <div class="tags">
 <span>Architectural</span>
 <span>Home</span>
 <span>3D Design</span>
 </div>
+
 </div>
 </div>
 
 <!-- 8 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="14.jpg">
 </div>
+
 <div class="project-content">
 <h3>Luxury Living Room</h3>
-<p>Premium interior scene with elegant furniture composition.</p>
+
+<p>
+Premium interior scene with elegant furniture composition.
+</p>
+
 <div class="tags">
 <span>Interior</span>
 <span>Living Room</span>
 <span>Modern</span>
 </div>
+
 </div>
 </div>
 
 <!-- 9 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="8.jpg">
 </div>
+
 <div class="project-content">
 <h3>Modern Mansion</h3>
-<p>Large-scale luxury mansion with realistic architectural detailing.</p>
+
+<p>
+Large-scale luxury mansion with realistic architectural detailing.
+</p>
+
 <div class="tags">
 <span>Mansion</span>
 <span>Luxury</span>
 <span>Interior</span>
 </div>
+
 </div>
 </div>
 
 <!-- 10 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="9.jpg">
 </div>
+
 <div class="project-content">
 <h3>Stylish Kitchen</h3>
-<p>Elegant Kitchen interior visualization.</p>
+
+<p>
+Elegant kitchen interior visualization.
+</p>
+
 <div class="tags">
 <span>Kitchen</span>
 <span>Interior</span>
 <span>Luxury</span>
 </div>
+
 </div>
 </div>
 
 <!-- 11 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="10.jpg">
 </div>
+
 <div class="project-content">
 <h3>Premium Interior</h3>
-<p>Creative architectural rendering with premium interior lighting.</p>
+
+<p>
+Creative architectural rendering with premium interior lighting.
+</p>
+
 <div class="tags">
 <span>Interior</span>
 <span>Architecture</span>
 <span>Modern</span>
 </div>
+
 </div>
 </div>
 
 <!-- 12 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="11.jpg">
 </div>
+
 <div class="project-content">
 <h3>Luxury Bedroom Space</h3>
-<p>Elegant Bedroom interior with premium material visualization.</p>
+
+<p>
+Elegant bedroom interior with premium material visualization.
+</p>
+
 <div class="tags">
 <span>Home</span>
 <span>Interior</span>
 <span>Premium</span>
 </div>
+
 </div>
 </div>
 
 <!-- 13 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="12.jpg">
 </div>
+
 <div class="project-content">
 <h3>Modern Bedroom Space</h3>
-<p>Modern Bedroom with clean and futuristic design.</p>
+
+<p>
+Modern bedroom with clean and futuristic design.
+</p>
+
 <div class="tags">
-<span>interior</span>
+<span>Interior</span>
 <span>Luxury</span>
 <span>Modern</span>
 </div>
+
 </div>
 </div>
 
 <!-- 14 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="13.jpg">
 </div>
+
 <div class="project-content">
 <h3>Stylish Kitchen</h3>
-<p>Stylish Kitchen concept featuring modern interior aesthetics.</p>
+
+<p>
+Stylish kitchen concept featuring modern interior aesthetics.
+</p>
+
 <div class="tags">
 <span>Kitchen</span>
-<span>interior</span>
+<span>Interior</span>
 <span>Luxury</span>
 </div>
+
 </div>
 </div>
 
 <!-- 15 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="15.jpg">
 </div>
+
 <div class="project-content">
 <h3>Premium Restaurant</h3>
-<p>Luxury Restaurant interior render with realistic materials and lighting.</p>
+
+<p>
+Luxury restaurant interior render with realistic materials and lighting.
+</p>
+
 <div class="tags">
-<span>Kitchen</span>
+<span>Restaurant</span>
 <span>Interior</span>
 <span>3D Render</span>
 </div>
+
 </div>
 </div>
 
 <!-- 16 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="16.jpg">
 </div>
+
 <div class="project-content">
 <h3>Contemporary House</h3>
-<p>Contemporary house concept featuring modern interior aesthetics.</p>
+
+<p>
+Contemporary house concept featuring modern aesthetics.
+</p>
+
 <div class="tags">
 <span>House</span>
-<span>interior</span>
+<span>Interior</span>
 <span>Luxury</span>
 </div>
+
 </div>
 </div>
 
 <!-- 17 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="17.jpg">
 </div>
+
 <div class="project-content">
 <h3>Professional Office Concept</h3>
-<p>Professional Office concept featuring modern interior aesthetics.</p>
+
+<p>
+Professional office concept featuring modern aesthetics.
+</p>
+
 <div class="tags">
 <span>Office</span>
 <span>Contemporary</span>
 <span>Luxury</span>
 </div>
+
 </div>
 </div>
+
 <!-- 18 -->
+
 <div class="project-card">
 <div class="project-image">
 <img src="18.jpg">
 </div>
+
 <div class="project-content">
 <h3>Luxury House Interior</h3>
-<p>Contemporary house concept featuring modern interior aesthetics.</p>
+
+<p>
+Contemporary house concept featuring modern interior aesthetics.
+</p>
+
 <div class="tags">
 <span>House</span>
 <span>Contemporary</span>
 <span>Luxury</span>
 </div>
+
 </div>
 </div>
 
