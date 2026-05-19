@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | Virtual 3D</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+    radial-gradient(circle at top left,#ff9a9e 0%,transparent 30%),
+    radial-gradient(circle at bottom right,#fad0c4 0%,transparent 30%),
+    radial-gradient(circle at center,#a18cd1 0%,transparent 35%),
+    linear-gradient(135deg,#0f172a,#111827,#1e1b4b);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Background Glow */
+
+.glow{
+    position:fixed;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:0.35;
+    z-index:-1;
+}
+
+.glow1{
+    background:#ff4ecd;
+    top:-120px;
+    left:-120px;
+}
+
+.glow2{
+    background:#00f2fe;
+    bottom:-120px;
+    right:-120px;
+}
+
+.glow3{
+    background:#ffd369;
+    top:40%;
+    left:40%;
+}
+
+/* Navbar */
+
+header{
+    width:100%;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#ffd369;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:28px;
+    transition:0.3s;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#ffd369;
+}
+
+/* Hero */
+
+.hero{
+    padding:160px 8% 80px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.hero h1 span{
+    background:linear-gradient(to right,#ffd369,#ff9f43,#ff4ecd);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    color:#d1d5db;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* Portfolio Grid */
+
+.portfolio{
+    padding:20px 8% 100px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+/* Project Card */
+
+.project-card{
+    background:rgba(255,255,255,0.08);
+    border-radius:30px;
+    overflow:hidden;
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.5s;
+    position:relative;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
+
+.project-image{
+    width:100%;
+    height:260px;
+    overflow:hidden;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.6s;
+}
+
+.project-card:hover img{
+    transform:scale(1.1);
+}
+
+.project-content{
+    padding:28px;
+}
+
+.project-content h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.project-content p{
+    color:#d1d5db;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tags span{
+    padding:8px 16px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    font-size:13px;
+}
+
+/* Footer */
+
+footer{
+    padding:35px 8%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#d1d5db;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:48px;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+<div class="glow glow3"></div>
+
+<!-- Navbar -->
+
+<header>
+
+<div class="logo">
+Virtual<span> 3D</span>
+</div>
+
+<nav>
+<a href="web.html">Home</a>
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<h1>
+My <span>Architectural Portfolio</span>
+</h1>
+
+<p>
+Explore premium 3D architectural visualizations including luxury villas,
+modern interiors, commercial projects, apartment concepts, and realistic
+building renders crafted with creativity and precision.
+</p>
+
+</section>
+
+<!-- Portfolio Grid -->
+
+<section class="portfolio">
+
+<div class="grid">
+
+<!-- 1 -->
+<div class="project-card">
+<div class="project-image">
+<img src="1.jpg">
+</div>
+<div class="project-content">
+<h3>Modern Minimal Home</h3>
+<p>Premium modern residential architecture with elegant exterior styling.</p>
+<div class="tags">
+<span>Exterior</span>
+<span>Luxury</span>
+<span>3D Render</span>
+</div>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="project-card">
+<div class="project-image">
+<img src="2.jpg">
+</div>
+<div class="project-content">
+<h3>Elegant Exterior</h3>
+<p>Luxury Exterior visualization with cinematic lighting and textures.</p>
+<div class="tags">
+<span>Architectural</span>
+<span>Modern</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="project-card">
+<div class="project-image">
+<img src="3.jpg">
+</div>
+<div class="project-content">
+<h3>Modern Home</h3>
+<p>Modern Home architecture with realistic  surroundings.</p>
+<div class="tags">
+<span>Luxury</span>
+<span>Exterior</span>
+<span>Architecture</span>
+</div>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="project-card">
+<div class="project-image">
+<img src="4.jpg">
+</div>
+<div class="project-content">
+<h3>Luxury Home</h3>
+<p>Contemporary Home concept with premium design aesthetics.</p>
+<div class="tags">
+<span>Home</span>
+<span>Modern</span>
+<span>3D Design</span>
+</div>
+</div>
+</div>
+
+<!-- 5 -->
+<div class="project-card">
+<div class="project-image">
+<img src="5.jpg">
+</div>
+<div class="project-content">
+<h3>Modern Premium House</h3>
+<p>Modern  home concept with stylish modern architecture.</p>
+<div class="tags">
+<span>Modern</span>
+<span>Exterior</span>
+<span>Concept</span>
+</div>
+</div>
+</div>
+
+<!-- 6 -->
+<div class="project-card">
+<div class="project-image">
+<img src="6.jpg">
+</div>
+<div class="project-content">
+<h3>Elegant Exterior Home</h3>
+<p>Elegant architecture with beautiful lighting environment.</p>
+<div class="tags">
+<span>Home</span>
+<span>Premium</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+
+<!-- 7 -->
+<div class="project-card">
+<div class="project-image">
+<img src="7.jpg">
+</div>
+<div class="project-content">
+<h3>Modern Home Design</h3>
+<p>Modern Home visualization with realistic textures.</p>
+<div class="tags">
+<span>Architectural</span>
+<span>Home</span>
+<span>3D Design</span>
+</div>
+</div>
+</div>
+
+<!-- 8 -->
+<div class="project-card">
+<div class="project-image">
+<img src="14.jpg">
+</div>
+<div class="project-content">
+<h3>Luxury Living Room</h3>
+<p>Premium interior scene with elegant furniture composition.</p>
+<div class="tags">
+<span>Interior</span>
+<span>Living Room</span>
+<span>Modern</span>
+</div>
+</div>
+</div>
+
+<!-- 9 -->
+<div class="project-card">
+<div class="project-image">
+<img src="8.jpg">
+</div>
+<div class="project-content">
+<h3>Modern Mansion</h3>
+<p>Large-scale luxury mansion with realistic architectural detailing.</p>
+<div class="tags">
+<span>Mansion</span>
+<span>Luxury</span>
+<span>Interior</span>
+</div>
+</div>
+</div>
+
+<!-- 10 -->
+<div class="project-card">
+<div class="project-image">
+<img src="9.jpg">
+</div>
+<div class="project-content">
+<h3>Stylish Kitchen</h3>
+<p>Elegant Kitchen interior visualization.</p>
+<div class="tags">
+<span>Kitchen</span>
+<span>Interior</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+
+<!-- 11 -->
+<div class="project-card">
+<div class="project-image">
+<img src="10.jpg">
+</div>
+<div class="project-content">
+<h3>Premium Interior</h3>
+<p>Creative architectural rendering with premium interior lighting.</p>
+<div class="tags">
+<span>Interior</span>
+<span>Architecture</span>
+<span>Modern</span>
+</div>
+</div>
+</div>
+
+<!-- 12 -->
+<div class="project-card">
+<div class="project-image">
+<img src="11.jpg">
+</div>
+<div class="project-content">
+<h3>Luxury Bedroom Space</h3>
+<p>Elegant Bedroom interior with premium material visualization.</p>
+<div class="tags">
+<span>Home</span>
+<span>Interior</span>
+<span>Premium</span>
+</div>
+</div>
+</div>
+
+<!-- 13 -->
+<div class="project-card">
+<div class="project-image">
+<img src="12.jpg">
+</div>
+<div class="project-content">
+<h3>Modern Bedroom Space</h3>
+<p>Modern Bedroom with clean and futuristic design.</p>
+<div class="tags">
+<span>interior</span>
+<span>Luxury</span>
+<span>Modern</span>
+</div>
+</div>
+</div>
+
+<!-- 14 -->
+<div class="project-card">
+<div class="project-image">
+<img src="13.jpg">
+</div>
+<div class="project-content">
+<h3>Stylish Kitchen</h3>
+<p>Stylish Kitchen concept featuring modern interior aesthetics.</p>
+<div class="tags">
+<span>Kitchen</span>
+<span>interior</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+
+<!-- 15 -->
+<div class="project-card">
+<div class="project-image">
+<img src="15.jpg">
+</div>
+<div class="project-content">
+<h3>Premium Restaurant</h3>
+<p>Luxury Restaurant interior render with realistic materials and lighting.</p>
+<div class="tags">
+<span>Kitchen</span>
+<span>Interior</span>
+<span>3D Render</span>
+</div>
+</div>
+</div>
+
+<!-- 16 -->
+<div class="project-card">
+<div class="project-image">
+<img src="16.jpg">
+</div>
+<div class="project-content">
+<h3>Contemporary House</h3>
+<p>Contemporary house concept featuring modern interior aesthetics.</p>
+<div class="tags">
+<span>House</span>
+<span>interior</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+
+<!-- 17 -->
+<div class="project-card">
+<div class="project-image">
+<img src="17.jpg">
+</div>
+<div class="project-content">
+<h3>Professional Office Concept</h3>
+<p>Professional Office concept featuring modern interior aesthetics.</p>
+<div class="tags">
+<span>Office</span>
+<span>Contemporary</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+<!-- 18 -->
+<div class="project-card">
+<div class="project-image">
+<img src="18.jpg">
+</div>
+<div class="project-content">
+<h3>Luxury House Interior</h3>
+<p>Contemporary house concept featuring modern interior aesthetics.</p>
+<div class="tags">
+<span>House</span>
+<span>Contemporary</span>
+<span>Luxury</span>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Virtual 3D | Premium Architectural Portfolio
+</footer>
+
+</body>
+</html>
