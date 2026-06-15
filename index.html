@@ -949,15 +949,15 @@ Need stunning architectural visualizations for your next project?
 Get in touch and bring your vision to life.
 </p>
 
-<form class="contact-form">
+<form class="contact-form" id="contactForm">
 
-<input type="text" placeholder="Your Name">
+<input type="text" id="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email">
+<input type="email" id="email" placeholder="Your Email" required>
 
-<textarea placeholder="Tell Me About Your Project"></textarea>
+<textarea id="project" placeholder="Tell Me About Your Project" required></textarea>
 
-<button class="btn btn-primary">
+<button type="submit" class="btn btn-primary">
 Send Message
 </button>
 
@@ -1010,6 +1010,54 @@ if(top < window.innerHeight - 80){
 }
 
 });
+
+});
+
+
+
+
+
+</script>
+<script type="module">
+
+import { db } from "./firebase.js";
+
+import {
+  collection,
+  addDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const project = document.getElementById("project").value.trim();
+
+    try {
+
+        await addDoc(collection(db, "contact_messages"), {
+            name: name,
+            email: email,
+            project: project,
+            createdAt: serverTimestamp()
+        });
+
+        alert("Message sent successfully!");
+
+        form.reset();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("Failed to send message.");
+
+    }
 
 });
 
